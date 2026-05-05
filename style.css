@@ -424,6 +424,117 @@ ul {
     font-family: var(--font-mono);
 }
 
+/* RESEARCH */
+.research {
+    border-top: 1px solid var(--border-dim);
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.research-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-dim);
+    padding: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.research-card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 30px rgba(0,240,255,0.15);
+    transform: translateY(-4px);
+}
+
+.research-header h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.research-authors {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.research-desc {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.research-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-dim);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ACHIEVEMENTS */
+.achievements {
+    border-top: 1px solid var(--border-dim);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.achievement-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-dim);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement-card:hover {
+    border-color: var(--accent-purple);
+    box-shadow: 0 8px 30px rgba(112,0,255,0.15);
+    transform: translateY(-6px);
+}
+
+.achievement-badge {
+    font-family: var(--font-mono);
+    display: inline-block;
+    background: rgba(112, 0, 255, 0.15);
+    color: var(--accent-purple);
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.achievement-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card p:nth-of-type(1) {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.achievement-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* FOOTER */
 .footer {
     padding-top: 8rem;
