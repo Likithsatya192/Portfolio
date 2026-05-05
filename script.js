@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* --- MOBILE MENU TOGGLE --- */
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
     /* --- INTERSECTION OBSERVER FOR FADE-INS --- */
     const observerOptions = {
         threshold: 0.1,
@@ -23,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('bg-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
+        if (!ctx) return;
         let width, height;
         let particles = [];
 
