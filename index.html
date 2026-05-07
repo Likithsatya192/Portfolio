@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -21,6 +21,26 @@
 
     <!-- Background Canvas -->
     <canvas id="bg-canvas"></canvas>
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+    <div class="aurora aurora-three"></div>
+    <div class="color-comets" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="starfall" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="mesh-grid"></div>
     <div class="vignette"></div>
 
     <!-- NAVBAR -->
@@ -28,7 +48,12 @@
         <div class="logo">
             <span class="terminal-prompt">></span> J Likith Sagar<span class="cursor">_</span>
         </div>
-        <nav>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu" aria-label="Primary navigation">
             <ul class="nav-links">
                 <li><a href="#mission" class="nav-item">01 // MISSION</a></li>
                 <li><a href="#projects" class="nav-item">02 // SYSTEMS</a></li>
@@ -54,10 +79,28 @@
                         Building production-ready AI systems, RAG pipelines, and machine learning systems that bridge
                         research and real-world deployment.
                     </p>
+                    <div class="hero-metrics" aria-label="Portfolio highlights">
+                        <span><strong>95%+</strong> accuracy</span>
+                        <span><strong>50K+</strong> files</span>
+                        <span><strong>AI/ML</strong> systems</span>
+                    </div>
                     <div class="hero-actions">
                         <a href="#projects" class="btn primary-btn">VIEW SYSTEMS</a>
                         <a href="#mission" class="btn secondary-btn">READ PROFILE</a>
                     </div>
+                </div>
+                <div class="hero-orb fade-in-up delay-2" aria-hidden="true">
+                    <div class="orb-core"></div>
+                    <div class="orb-ring ring-one"></div>
+                    <div class="orb-ring ring-two"></div>
+                    <div class="orb-chip chip-one">RAG</div>
+                    <div class="orb-chip chip-two">MLOps</div>
+                    <div class="orb-chip chip-three">Agents</div>
+                    <div class="orb-chip chip-four">LangGraph</div>
+                    <div class="orb-chip chip-five">FastAPI</div>
+                    <div class="orb-chip chip-six">Vector DB</div>
+                    <div class="orb-chip chip-seven">PyTorch</div>
+                    <div class="orb-chip chip-eight">AWS</div>
                 </div>
             </div>
         </section>
@@ -84,7 +127,7 @@
                         </p>
                         <p>
                             Rather than treating models as isolated components, I approach AI as a system-level
-                            discipline—where data flow, orchestration, deployment, and monitoring are as critical
+                            discipline where data flow, orchestration, deployment, and monitoring are as critical
                             as model accuracy. The objective is consistent: build intelligent systems that can be
                             trusted in real-world environments.
                         </p>
@@ -134,7 +177,7 @@
                                 <li>LangGraph</li>
                                 <li>FastAPI</li>
                             </ul>
-                            <a href="https://github.com/Nithin218/MindMate-AI" class="link-arrow">ACCESS NODE -></a>
+                            <a href="https://github.com/Nithin218/MindMate-AI" class="link-arrow" target="_blank" rel="noopener noreferrer">ACCESS NODE</a>
                         </div>
                     </article>
 
@@ -143,7 +186,7 @@
                         <div class="card-glow"></div>
                         <div class="card-content">
                             <div class="card-header">
-                                <span class="mono-tag">RAG + FINANCE</span>
+                                <span class="mono-tag">FINANCE AI</span>
                                 <h3>FinPilot</h3>
                             </div>
                             <p>
@@ -155,7 +198,7 @@
                                 <li>LLMs</li>
                                 <li>FastAPI</li>
                             </ul>
-                            <a href="https://github.com/Likithsatya192/FinPilot" class="link-arrow">ACCESS NODE -></a>
+                            <a href="https://github.com/Likithsatya192/FinPilot" class="link-arrow" target="_blank" rel="noopener noreferrer">ACCESS NODE</a>
                         </div>
                     </article>
 
@@ -174,9 +217,9 @@
                             <ul class="tech-list">
                                 <li>ML</li>
                                 <li>LangChain</li>
-                                <li>AWS EC2</li>
+                                <li>Multi-Model Agents</li>
                             </ul>
-                            <a href="https://github.com/Likithsatya192/Multi-Model-AI-Agent-for-Health-Diagnostics" class="link-arrow">ACCESS NODE -></a>
+                            <a href="https://github.com/Likithsatya192/Multi-Model-AI-Agent-for-Health-Diagnostics" class="link-arrow" target="_blank" rel="noopener noreferrer">ACCESS NODE</a>
                         </div>
                     </article>
 
@@ -249,7 +292,7 @@
                         <div class="research-meta">
                             <span><strong>Journal:</strong> International Journal for Research in Applied Science & Engineering Technology (IJRASET)</span>
                             <span><strong>Published:</strong> April 2026 | Volume 14, Issue IV</span>
-                            <span><strong>DOI:</strong> 10.22214/ijraset.2026.80986 | <strong>Impact Factor:</strong> 7.538</span>
+                            <span><strong>DOI:</strong> <a href="https://doi.org/10.22214/ijraset.2026.80986" target="_blank" rel="noopener noreferrer">10.22214/ijraset.2026.80986</a> | <strong>Impact Factor:</strong> 7.538</span>
                         </div>
                     </article>
                 </div>
@@ -266,7 +309,7 @@
 
                 <div class="achievements-grid fade-in-up">
                     <div class="achievement-card fade-in-up delay-1">
-                        <span class="achievement-badge">🥈 2nd PLACE</span>
+                        <span class="achievement-badge">SILVER / 2nd PLACE</span>
                         <h3>Smart India Internal Hackathon</h3>
                         <p><strong>AUCE 2024</strong></p>
                         <p class="achievement-desc">
@@ -276,7 +319,7 @@
                     </div>
 
                     <div class="achievement-card fade-in-up delay-2">
-                        <span class="achievement-badge">🥉 3RD PLACE</span>
+                        <span class="achievement-badge">BRONZE / 3RD PLACE</span>
                         <h3>Ideathon</h3>
                         <p><strong>AUCE 2025</strong></p>
                         <p class="achievement-desc">
@@ -286,7 +329,7 @@
                     </div>
 
                     <div class="achievement-card fade-in-up delay-3">
-                        <span class="achievement-badge">💻 300+</span>
+                        <span class="achievement-badge">300+ SOLVED</span>
                         <h3>LeetCode Problem Solving</h3>
                         <p><strong>Competitive Programming</strong></p>
                         <p class="achievement-desc">
@@ -308,9 +351,9 @@
                 </a>
 
                 <div class="footer-links">
-                    <a href="https://github.com/Likithsatya192">GITHUB</a>
-                    <a href="https://www.linkedin.com/in/likith-sagar/">LINKEDIN</a>
-                    <a href="https://leetcode.com/u/likith_/">LEETCODE</a>
+                    <a href="https://github.com/Likithsatya192" target="_blank" rel="noopener noreferrer">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/likith-sagar/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                    <a href="https://leetcode.com/u/likith_/" target="_blank" rel="noopener noreferrer">LEETCODE</a>
                 </div>
 
                 <div class="copyright">
